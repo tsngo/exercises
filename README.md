@@ -7,9 +7,9 @@ run `cd /mnt/d/dev` or go to any location of your choice
 
 if git is not installed, run `sudo apt-get update` and `sudo apt-get install git` (`which git` will return nothing if not installed)
 
-run `git clone https://git@github.com/tsngo/excercises ./excercises`
+run `git clone https://git@github.com/tsngo/exercises ./exercises`
 
-run `cd excercises`
+run `cd exercises`
 
 run `npm install` to install libraries
 

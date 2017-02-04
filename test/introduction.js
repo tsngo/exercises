@@ -36,3 +36,37 @@ describe('floor', () => {
         expect(introduction.floor(2.8)).to.be.equal(2);
     });
 });
+
+describe('findRange', () => {
+    it('should return the difference between max and min array value', () => {
+        let array = [1, 2, 3, 4, 5, 6];
+        expect(introduction.findRange(array)).to.be.equal(5);
+    });
+
+    it('should return the difference between max and min array value using different method', () => {
+        let array = [45, 23, 45, 34, 556, 346];
+        let max = Math.max.apply(null, array); // call Math.max with each values in array as parameter
+        let min = Math.min.apply(null, array);
+        expect(introduction.findRange(array)).to.be.equal(max - min);
+    });
+
+    it('should return the difference between max and min array value using ES6', () => {
+        let array = [834, 243, 435, 324, 256, 346];
+        let max = Math.max(...array); // call Math.max.apply using ES6 syntax spread operator (...)
+        let min = Math.min(...array);
+        expect(introduction.findRange(array)).to.be.equal(max - min);
+    });
+});
+
+describe('reverseArray', () => {
+    it('should return the array with elements in reverse order of the parameter passed to function', () => {
+        let array = [1, 2, 3, 4, 5, 6];
+        expect(introduction.reverseArray(array)).to.be.deep.equal(array.reverse());
+    });
+
+    it('should return the array with elements in reverse order of the parameter passed to function', () => {
+        let array = [834, 243, 435, 324, 256, 346];
+        expect(introduction.reverseArray(array)).to.be.deep.equal(array.reverse());
+    });
+});
+
